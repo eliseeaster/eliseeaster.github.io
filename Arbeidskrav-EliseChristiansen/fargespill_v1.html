@@ -1,0 +1,107 @@
+<html>
+    <head></head>
+    <body>
+        <h1>Fargespill v.1.</h1>
+            <h3>Klikk på boksen nedenfor som matcher denne boksens farge</h3>
+            <div id="main-box"></div>
+            <h1 id="right-or-wrong">Du har ikke svart enda<br><br>Klikk på riktig boks nedenfor</h1>
+            <div id="box-1"></div>
+            <div id="box-2"></div>
+            <div id="box-3"></div>
+  
+       
+        <script>
+        
+        /* Henter HTML elementer */
+        var mainBox = document.getElementById("main-box");
+        var rightOrWrongOutput = document.getElementById("right-or-wrong");
+      
+        var box1 = document.getElementById("box-1"); 
+        var box2 = document.getElementById("box-2");
+        var box3 = document.getElementById("box-3"); 
+            
+    
+      /* lager variabler med tilfeldige fargekoder */
+            
+        function getRGB(){
+           return Math.floor(Math.random()*256);
+        }
+            
+        var color1 = `rgb(${getRGB()},${getRGB()},${getRGB()})`;
+        var color2 = `rgb(${getRGB()},${getRGB()},${getRGB()})`;
+        var color3 = `rgb(${getRGB()},${getRGB()},${getRGB()})`;
+    
+     /*styler den øverste boksen*/
+      
+      var colorArray = [color1, color2, color3];
+        
+      var randomNmr = Math.floor(Math.random() * 3);
+      mainBox.style.backgroundColor = colorArray[randomNmr];
+            
+      mainBox.style.height = "100px";
+      mainBox.style.width = "100px"; 
+            
+                
+       function setBoxStyle(){
+       box1.style.backgroundColor=color1;
+       box1.style.height = "100px";
+       box1.style.width = "100px";
+       box1.style.display = "inline-block";
+       box1.style.border = "0px";
+      
+       box2.style.backgroundColor=color2;
+       box2.style.height = "100px";
+       box2.style.width = "100px";
+       box2.style.display = "inline-block";
+       box2.style.border = "0px";
+      
+       box3.style.backgroundColor=color3;
+       box3.style.height = "100px";
+       box3.style.width = "100px";
+       box3.style.display = "inline-block";
+       box3.style.border = "0px";
+         
+       
+       
+       }
+                               
+     /* funksjoner på click event*/
+        
+      function showBoxColor(){
+            
+      setBoxStyle();
+            
+            
+      if(this.style.backgroundColor === mainBox.style.backgroundColor)
+             
+      {rightOrWrongOutput.innerHTML = "<br><br>riktig";
+  
+            }
+            
+       else
+       {rightOrWrongOutput.innerHTML="<br><br>feil";
+   
+        }
+         }
+        
+     /* click element på de tre boksene */
+         box1.onclick = showBoxColor;
+      
+         box2.onclick = showBoxColor;
+                               
+         box3.onclick = showBoxColor;
+      
+         setBoxStyle();
+           
+            
+          /* KOMMENTARER
+          - du må bruke return 
+          - Math må skrives med stor M
+          - bruk inline-block for å få boksene ved siden av hverandre
+          */
+       
+           
+        
+        </script>
+    </body>
+</html>
