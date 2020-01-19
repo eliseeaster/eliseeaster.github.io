@@ -1,0 +1,619 @@
+/* Blackout start */
+#blackout{
+    width: 1200px;
+    height: 650px;
+    top: 150px;
+    position: absolute;
+    background-color:#292C34;
+    z-index: 149;
+    animation: blackFade 4s forwards;
+}
+
+@keyframes blackFade{
+    85%{
+        opacity: 1;
+    }
+
+    99% {
+        z-index: 149;
+    }
+
+    100% {
+        opacity: 0;
+        z-index: 0;
+    }
+}
+/* Blackout end */
+
+/* header start */
+#header{
+    width: 1200px;
+    height: 150px;
+    background-color:#292C34;
+    position: absolute;
+    margin: auto;
+}
+
+#rocket{
+    height: 100px;
+    padding: 20px;   
+    position: absolute;
+    left: 535px;
+    cursor:pointer;
+    opacity: 0;
+    z-index: 100;
+    animation: rocket-hover 0.1s infinite alternate, rocket-in 3s forwards;
+    cursor: pointer;
+}
+
+#rocket:hover {
+    height: 110px;
+     
+}
+
+@keyframes rocket-hover {
+    from{
+        transform:translateY(0px);
+    }
+    to{
+        transform: translateY(1px);
+    }
+}
+
+@keyframes rocket-in {
+    99% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+/* start planets */
+.planets{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin-top: 100px;
+    position: absolute;
+}
+
+#planet-1{
+    background-image: radial-gradient(yellow, green);
+    box-shadow: 0px 0px 10px 10px darkgreen;
+    left:1050px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+#planet-1:hover {
+    height: 110px;
+    width: 110px;
+    animation: planet-spin 5s infinite linear;
+}
+
+#planet-4{
+    background-image: linear-gradient(red, darkorange, red, darkorange, red);
+    box-shadow: 0px 0px 10px 10px darkred;
+    left:30px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+
+#planet-4:hover {
+    height: 110px;
+    width: 110px;
+    animation: planet-spin 5s infinite linear;
+}
+
+@keyframes planet-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+/* start planets */
+/* start stars  */
+.stars-img{
+    position: absolute;
+    height: 45px;
+    animation: blinkingstars 2s infinite alternate;
+}
+
+/* stars start */
+
+#star-1 {
+     left: 460px;
+     top: 40px;  
+}
+
+#star-2 {
+     left: 750px;
+     top: 60px;
+     animation-delay: 0.5s;   
+}
+
+#star-3 {
+     left: 300px;
+     top: 70px;
+     animation-delay: 1s;   
+}
+
+#star-4 {
+     left: 950px;
+     top: 40px;
+     animation-delay: 0.5s;   
+}
+
+/* Header end */
+
+#star-5 {
+    left: 200px;
+    top: 200px;  
+}
+
+#star-6 {
+    left: 1000px;
+    top: 350px;  
+    animation-delay: 0.5s;  
+}
+
+#star-7 {
+    left: 300px;
+    top: 600px;  
+    animation-delay: 1s;  
+}
+
+#star-8 {
+    left: 950px;
+    top: 450px;  
+    animation-delay: 1.5s;  
+}
+
+#star-9 {
+    left: 460px;
+    top: 380px;  
+}
+
+#star-10 {
+    left: 750px;
+    top: 350px;  
+    animation-delay: 0.5s;  
+}
+
+#star-11 {
+    left: 300px;
+    top: 500px; 
+    animation-delay: 1s;   
+}
+
+#star-12 {
+    left: 950px;
+    top: 100px;  
+    animation-delay: 1.5s;  
+}
+
+@keyframes blinkingstars {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+/* End stars */
+/* Big rocket start */
+
+#rocket-fly {
+    position: absolute;
+    z-index: 150;
+    left: 460px;
+    top: 1500px;
+    animation: rocket-flyover 5s normal;
+}
+
+@keyframes rocket-flyover {
+    from {
+        transform: translateY(0px)
+    }
+    to {
+        transform:translateY(-2000px) ;
+    }
+}
+
+/* Big rocket end */
+/* Container start */
+
+#container-div {
+    width: 1200px;
+    height: 800px;
+    margin: auto;
+    position: relative;
+    background-color: #292C34;
+    overflow: hidden;
+    border-radius: 10px;
+    
+}
+
+/* Window Start */
+#stand-div{
+    width: 500px;
+    height: 200px;
+    margin-left: 350px;
+    position: absolute;
+    margin-top: 200px;
+    border-radius: 10px;
+    background-color: white;
+    overflow: hidden;
+    position: absolute;
+}
+
+#window-div{
+    width: 500px;
+    height: 200px;
+    margin-left: 350px;
+    position: absolute;
+    margin-top: 200px;
+    border-radius: 10px;
+    background-color: gray;
+    opacity: 0.4;
+}
+
+#spacey-img{
+    position: absolute;
+    margin-top: -80px;
+    margin-left: 50px;
+    height: 400px;
+    width: 400px;
+    
+}
+
+#spacey2-img{
+    position: absolute;
+    margin-top: 100px;
+    height: 200px;
+    width: 200px;
+    animation: move 0.3s linear infinite alternate;
+}
+
+#spacey3-img{
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 100px;
+    height: 200px;
+    width: 200px;
+    animation: move 0.3s linear infinite alternate;
+}
+
+#spacey4-img{
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 200px;
+    height: 200px;
+    width: 200px;
+    animation: move 0.3s linear infinite alternate;
+}
+
+#spacey5-img{
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 300px;
+    height: 200px;
+    width: 200px;
+    animation: move 0.3s linear infinite alternate; 
+}
+
+/* Animation for Audience start */
+
+@keyframes move{
+    100%{
+        transform: translateX(-30px);
+    }
+}
+
+/* Animations for Audience end*/
+/* Window End */
+
+/* Court Starts */
+
+#court-div{
+    background-color:#F3A654;
+    height: 300px;
+    width: 1100px;
+    margin-left: 50px;
+    margin-top: 450px;
+    border-radius: 50%;
+    position: absolute;
+    overflow: hidden;
+}
+/* Elements on court start*/
+#stripes-div{
+    border: 10px solid white;
+    height: 100px;
+    width: 150px;
+    border-radius: 50%;
+    margin: auto;
+    margin-top: 90px;
+}
+
+#paint1-div{
+    border: 10px solid white;
+    height: 100px;
+    width: 150px;
+    border-radius: 25%;
+    margin-top: -120px;
+    margin-left: 970px;
+    position: relative;
+
+}
+
+#paint2-div{
+    border: 10px solid white;
+    height: 100px;
+    width: 150px;
+    border-radius: 25%;
+    margin-top: -120px;
+    margin-left: -35px;
+    position: relative;
+}
+/* Goal Rings start */
+#ring-container{
+    margin-top: 150px;
+    position: absolute;
+}
+
+#goalring1-div{
+    border: 10px solid gold;
+    height: 200px;
+    width: 50px;
+    border-radius: 50%;
+    margin-top: 500px;
+    margin-left: 50px;
+    z-index: 100;
+    animation: goalmove 0.5s linear infinite alternate, colorChange 18s normal;
+    position: absolute;
+}
+
+#goalring2-div{
+    border: 10px solid gold;
+    height: 200px;
+    width: 50px;
+    border-radius: 50%;
+    margin-top: 150px;
+    margin-left: 1070px;
+    z-index: 100;
+    animation: goalmove 0.5s linear infinite alternate;
+    position: absolute; 
+}
+/* Goal Rings end */
+/* Elements on court end */
+/* Animations for court elements start*/
+@keyframes colorChange {
+    85% {
+        border: 10px solid gold;
+
+    }
+    94%{
+        border: 10px solid #16FF2A;
+    }
+    96% {
+        border: 10px solid gold;
+    }
+} 
+
+@keyframes goalmove{
+    0% {
+        margin-top: 150px;
+    }
+
+    100% {
+        margin-top: 140px;
+    }
+}
+/* Animations for court elements end*/
+/* Players start */
+/* Winners start */
+#robot1{
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    z-index: 100;
+    top: 550px;
+    left: 800px;
+
+}
+
+#robot2{
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    z-index: 100;
+    top: 350px;
+    left: 500px;
+    animation: score normal 3s;
+    animation-delay: 14s;
+}
+
+@keyframes score {
+    0% {
+        top: 350px;
+        left: 500px
+    }
+
+    25% {
+        top: 150px;
+        left: 500px;
+    }
+     
+    50% {
+        left: 200px;
+        top: 100px;
+        height: 250px;
+
+    }
+
+
+}
+
+/* Winners start */
+/* Losers start */
+#loser1{
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    z-index: 100;
+    top: 300px;
+    left: 200px;
+    animation: moving 1s infinite alternate;
+    animation-delay: 12.5s;
+
+}
+
+#loser2{
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    z-index: 100;
+    top: 550px;
+    left: 500px;
+    animation: moving 1s infinite alternate;
+    animation-delay: 12s;
+}
+
+@keyframes moving{
+    100% {
+        transform: translateY(40px);
+    }
+}
+/* Players end */
+/* losers end */
+/* Ball starts */
+#ball {
+    background-color: #A32E06;
+    height: 100px;
+    width: 100px;
+    z-index: 100;
+    position: absolute;
+    border-radius: 50%;
+    left: 0px;
+    top: 360px;
+    animation: ballMotion 3s normal, spin 3s linear;
+    animation-delay: 14s;
+    opacity: 0;
+}
+/* Animation for ball movement start */ 
+@keyframes ballMotion {
+    0%{
+        opacity: 1;
+        left: 800px;
+        top: 550px;
+        
+    }
+
+    50% {
+        opacity: 1;
+        left: 200px;
+        top: 200px;
+    }
+
+    100% {
+        opacity: 1;
+
+        left: 0px;
+        top: 360px;
+    }
+
+}
+
+@keyframes spin {
+    100%{transform: rotate(720deg);}
+}
+/* Animation for ball movement end */ 
+
+#ball2 {
+    background-color: #A32E06;
+    height: 100px;
+    width: 100px;
+    z-index: 100;
+    position: absolute;
+    border-radius: 50%;
+    top: 580px;
+    left: 750px;
+    animation: fadeOut 10000000000001s linear;
+    animation-delay: 14s;
+    
+}
+
+@keyframes fadeOut {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+/* Stripes on ball start */
+.stripe {
+    background-color: white;
+    height: 100px;
+    width: 5px;
+    margin: auto;
+    border-radius: 10px;
+}
+
+.stripe2 {
+    background-color: white;
+    height: 83px;
+    width: 5px;
+    margin-left: 20px;
+    position: absolute;
+    margin-top: -91px;
+    border-radius: 10px;
+}
+
+.stripe3 {
+    background-color: white;
+    height: 83px;
+    width: 5px;
+    margin-left: 0px;
+    position: absolute;
+    margin-top: -91px;
+    margin-left: 75px;
+    border-radius: 10px;
+}
+/* Stripes on ball end */
+/* Ball end */
+/* Court End */
+/* Speech Bubble start */ 
+#speechBubble-div{
+    height: 170px;
+    width: 300px;
+    position: absolute;
+    border-radius: 10px;
+    left: 700px;
+    z-index: 50;
+    top: 10px;
+    border: 5px solid white;
+    opacity: 0;
+    animation: fadein 8s linear;
+    animation-delay: 4s;
+}
+
+#speechBubbleEl-div{
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    padding: 13px;
+    font-family: monospace;
+}
+
+@keyframes fadein{
+    0%{opacity: 1;}
+    100%{opacity: 1;}
+
+}
+/* Speech Bubble start */ 
+/* Container end */

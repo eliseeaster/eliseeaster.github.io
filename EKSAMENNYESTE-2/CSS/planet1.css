@@ -1,0 +1,1060 @@
+
+*{
+    font-family:monospace, sans-serif;
+    padding: 0;
+    margin: 5px;
+}
+
+#main-container{
+    height: 800px;
+    width: 1200px;
+    position: relative;
+    margin: auto; 
+    overflow: hidden;
+    border-radius:10px;
+    
+}
+
+#header{
+    width: 1200px;
+    height: 150px;
+    background-color:#292C34;
+    position: absolute;
+    margin: auto;
+   
+}
+/* Blackout start */
+#blackout {
+    position: absolute;
+    z-index: 900;
+    height: 652px;
+    width: 1200px;
+    background-color: #292C34;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    left:-5px;
+    top:143px;
+    animation: fadeout 4s forwards;
+}
+
+@keyframes fadeout{
+    85% {
+        opacity: 1;
+    }
+    99%{
+        z-index: 900;
+    }
+    100% {
+        opacity: 0;
+        z-index: 0;
+    }
+}
+/* Blackout end */
+
+/* start rocket */
+#rocket{
+    height: 100px;
+    padding: 20px;
+    left: 540px;    
+    position: absolute;
+    cursor:pointer;
+    opacity: 0;
+    animation: rocket-hover 0.1s infinite alternate, rocket-in 3s forwards;
+}
+
+#rocket:hover {
+    height: 110px;
+     
+}
+
+@keyframes rocket-hover {
+    from{
+        transform:translateY(0px);
+    }
+    to{
+        transform: translateY(1px);
+    }
+}
+
+@keyframes rocket-in {
+    99% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+/* end rocket */
+
+/* start planets */
+.planets{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin-top: 100px;
+    position: absolute;
+}
+
+#planet-2{
+    background-image: linear-gradient(to right, blue, indigo, violet);
+    box-shadow: 0px 0px 10px 10px darkblue;
+    position: absolute;
+    bottom: 15px;
+    left: 1050px;
+    cursor: pointer;
+}
+
+#planet-2:hover {
+    height: 110px;
+    width: 110px;
+    animation: planet-spin 5s infinite linear;
+}
+
+#planet-5{
+    background-image: linear-gradient(to bottom left, brown, orange, lightblue, yellow, brown);
+    margin-left: 800px;
+    box-shadow: 0px 0px 10px 10px darkorange;
+    position: absolute;
+    bottom: 15px;
+    right: 1050px;
+}
+
+#planet-5:hover {
+    height: 110px;
+    width: 110px;
+    animation: planet-spin 5s infinite linear;
+}
+
+@keyframes planet-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+/* end planets */
+
+/* start stars  */
+.stars{
+    position: absolute;
+    height: 45px;
+    animation: blinkingstars 2s infinite alternate;
+}
+
+#star-1 {
+     left: 460px;
+     top: 40px;  
+}
+
+#star-2 {
+     left: 750px;
+     top: 60px;
+     animation-delay: 0.5s;   
+}
+
+#star-3 {
+     left: 300px;
+     top: 70px;
+     animation-delay: 1s;   
+}
+
+#star-4 {
+     left: 950px;
+     top: 40px;
+     animation-delay: 1.5s;   
+}
+
+@keyframes blinkingstars {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+/* end stars */
+
+/* start rocket-fly */
+#rocket-fly {
+    position: absolute;
+    z-index: 999;
+    left: 460px;
+    top: 1500px;
+    animation: rocket-flyover 5s normal;
+}
+
+@keyframes rocket-flyover {
+    from {
+        transform: translateY(0px)
+    }
+    to {
+        transform:translateY(-2000px) ;
+    }
+}
+/* rocket-fly end*/
+
+/* start tech guy */
+#techguy {
+    position: absolute;
+    height: 200px;
+    z-index: 10;
+    border: 10px;
+    top: 590px;
+    left: 1000px;
+    cursor: pointer;
+}
+
+#techguy:hover {
+    height: 210px;
+}
+
+.tech-txt {
+    position: absolute;
+    z-index: 10;
+    top: 550px;
+    left: 980px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: white;
+    text-align: center;
+    width: 100px;
+}
+
+#tech-info-active {
+    display: none;
+}
+
+#tech-info:active #tech-info-active {
+    display: inline-block;
+}
+
+#tech-info:active #tech-info-normal {
+    display: none;
+}
+
+#bluelight {
+    position: absolute;
+    left: 1100px;
+    top: 640px;
+    z-index: 11;
+    box-shadow:
+        0 0 80px 30px #fff,  
+        0 0 80px 60px #0ff, 
+        0 0 80px 90px #0ff; 
+    animation: bluelight-blink 0.6s infinite alternate;
+}
+
+@keyframes bluelight-blink {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 0.2
+    }
+}
+/* end tech guy */
+
+/* start pc with buttons for coding */
+#computer-main1 {
+    top: 540px;
+    left: 100px;
+}
+
+#computer-main2 {
+    top: 540px;
+    left: 400px;
+}
+
+.computer-main {
+    position: absolute;
+    height: 80px;
+    width: 40px;
+    background-color: #403e3a;
+    border: 2px solid grey;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.comp-btns {
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    border-radius: 100%;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+#comp-btn1 {
+    background-color: green;
+    top: 580px;
+    left:115px;
+}
+
+#comp-btn1:active {
+    background-color: red;
+}
+
+#comp-btn2 {
+    background-color: red;
+    top: 580px;
+    left:415px;
+}
+
+#comp-btn2:active {
+    background-color: green;
+}
+.typing {
+    z-index: 300;
+    white-space: nowrap;
+    overflow: hidden;    
+    font-family: 'Source Code Pro', monospace;  
+    font-size: 6px;
+    color: #00ff7f;
+    animation: typing 7s steps(80,end) 3s infinite;         
+}
+
+#code-typing1{
+    position: absolute;
+    left: 75px;
+    bottom: 185px;
+    
+}
+
+#comp-btn1:active #code-typing1 {
+    display: none;
+}
+
+#code-typing2{
+    position: absolute;
+    left: 75px;
+    bottom: 185px; 
+    display: none;
+}
+
+#comp-btn2:active #code-typing2 {
+    display: block;
+}
+
+@keyframes typing{
+  from{width: 0;}
+  to{width: 140px;}
+}
+/* end pc with coding */
+
+/* start chalkboard text */
+#chalk-txt {
+    position: absolute;
+    z-index: 12;
+    color: white;
+    top: 280px;
+    left: 480px;
+}
+/* end chalkboar text  */
+
+/*start syringe */
+#syringe-1{
+    position: absolute;
+    left: 845px;
+    top: 480px;
+    height: 17px;
+    width: 50px;
+    background-color: #00ff7f;
+    z-index: 10;
+    animation: empty-syringe 5s infinite;
+}
+
+#syringe-border{
+    position: absolute;
+    left: 845px;
+    top: 480px;
+    height: 15px;
+    width: 50px;
+    border: 2px solid white; 
+    z-index: 10;
+}
+
+@keyframes empty-syringe {
+    from {
+        width: 50px;
+    }
+    to {
+        width: 0px;
+    }
+}
+
+#syringe-2{
+    position: absolute;
+    left: 825px;
+    top:488px;
+    width: 20px;
+    height: 2px;
+    background-color: white;
+    z-index: 10;
+    
+}
+
+#syringe-3{
+    position: absolute;
+    z-index: 15;
+    left: 895px;
+    top:488px;
+    height: 3px;
+    width: 58px;
+    background-color: white;
+    animation: syringe-moving 5s infinite;
+}
+
+@keyframes syringe-moving {
+    from {
+        transform: translatex(0px);
+    }
+    to {
+        transform: translatex(-50px);
+    }
+}
+
+#syringe-4{
+    position: absolute;
+    z-index: 15;
+    left: 950px;
+    top:480px;
+    height: 20px;
+    width: 3px;
+    background-color: white;
+    animation: syringe-moving 5s infinite;
+}
+
+#syringe-5{
+    position: absolute;
+    z-index: 16;
+    left: 855px;
+    top: 487px;
+    height: 10px;
+    width: 3px;
+    background-color: black;
+}
+
+#syringe-6{
+    position: absolute;
+    z-index: 16;
+    left: 870px;
+    top:487px;
+    height: 10px;
+    width: 3px;
+    background-color: black;  
+}
+
+#syringe-7{
+    position: absolute;
+    z-index: 16;
+    left: 885px;
+    top: 487px;
+    height: 10px;
+    width: 3px;
+    background-color: black;
+}
+/*end Syringe */
+
+/*start spacey */
+#spacey {
+    position: absolute;
+    z-index: 12;
+    height: 350px;
+    top: 510px;
+    left: 700px;
+    cursor: pointer;
+}
+
+.spacey-txt {
+    position: absolute;
+    z-index: 10;
+    top: 550px;
+    left: 700px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: white;
+    text-align: center;
+    width: 100px;
+}
+
+#spacey:hover {
+    height: 360px;
+}
+
+#spacey-info-active {
+    display: none;
+}
+
+#spacey-info:active #spacey-info-normal {
+    display: none;
+}
+
+#spacey-info:active #spacey-info-active {
+    display: block;
+}
+/* end spacey */
+
+/* start robot with butt */
+#robot {
+    position: absolute;
+    top: 360px;
+    left: 700px;
+    right: 900px;
+    height: 200px;
+    z-index: 5;
+    cursor: pointer;
+}
+
+#robot:hover {
+    height: 210px;
+}
+
+#robot-normal {
+    position: absolute;
+    left:730px;
+    top:350px;
+    z-index: 2;
+}
+
+#robot-active {
+    position: absolute;
+    z-index: 2;
+    display: none;
+    height:60px;
+    width: 140px;
+    left: 680px;
+    top:330px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: white;
+    text-align: center;
+}
+
+.robot:active #robot-normal {
+    display: none;
+}
+
+.robot:active #robot-active {
+    display: inline-block;
+}
+/* end robot with butt */
+
+/* start economy robot */
+#economy-robot {
+    position: absolute;
+    z-index: 9;
+    height: 180px;
+    top: 330px;
+    left: 20px;
+    cursor: pointer; 
+    transform: rotateY(180deg)
+}
+
+#economy-robot:hover {
+    height: 190px;
+}
+
+.economy-txt {
+    position: absolute;
+    z-index: 8;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: white;
+    text-align: center;
+    width: 200px;
+    top: 200px;
+    left: 100px;
+}
+
+#economy-info-active {
+    display: none;
+}
+
+#economy-info:active #economy-info-active {
+    display: block;
+}
+
+#economy-info:active #economy-info-normal {
+    display: none;
+}
+/* end robot with butt */
+
+/*Start money */
+.money {
+    position: absolute;
+    z-index: 10;
+    background-color: #85bb65;
+    border: 3px solid green;
+    text-align: center;
+    font-weight:800;
+    left: 80px;
+    top: 460px;
+    display: none;
+}
+
+#economy-info:hover .money {
+    display: block;
+}
+
+#money-1{
+    
+    animation: money-falling-1 2s infinite;
+}
+
+@keyframes money-falling-1 {
+    from {
+        transform: translatey(0px);
+    }
+    to {
+         transform: translatey(30px);
+    }
+}
+   
+#money-2{
+    animation-delay: 1s;
+    animation: money-falling-2 2s infinite;
+}
+
+@keyframes money-falling-2 {
+    from {
+        transform: translatey(0px);
+    }
+    to {
+         transform: translatey(60px);
+    }
+    }
+
+#money-3{
+   
+    animation: money-falling-3 3s infinite;
+}
+
+@keyframes money-falling-3 {
+    from {
+        transform: translatey(0px);
+    }
+    to {
+         transform: translatey(90px);
+    }
+}
+
+/* end Money */
+
+/* start graph */
+
+#graph-background {
+    position: absolute;
+    z-index: 7;
+    height: 70px;
+    width: 80px;
+    background-color: bisque;
+    border: 5px solid black;
+    border-radius: 10px;
+    left: 115px;
+    top: 300px;
+}
+
+#graph-stack1 {
+    position: absolute;
+    z-index: 8;
+    height: 30px;
+    width: 15px;
+    background-color: aqua;
+    bottom: 415px;
+    left: 125px;
+    animation: stack1-move 2s infinite alternate;
+}
+
+@keyframes stack1-move {
+  
+   from {
+            height: 15px;
+        }
+        to {
+            height: 30px;
+        }
+    }
+
+#graph-stack2 {
+    position: absolute;
+    z-index: 8;
+    height: 25px;
+    width: 15px;
+    background-color: blue;
+    bottom: 415px;
+    left: 147px;
+    animation: stack2-move 3s infinite alternate;
+}
+
+@keyframes stack2-move {
+    from {
+            height: 10px;
+        }
+        to {
+            height: 25px;
+        }
+    }
+
+#graph-stack3 {
+    position: absolute;
+    z-index: 8;
+    height: 40px;
+    width: 15px;
+    background-color: greenyellow;
+    bottom: 415px;
+    left: 173px;
+    animation: stack3-move 4s infinite alternate;
+}
+
+@keyframes stack3-move {
+    from {
+        height: 20px;
+    }
+    to {
+        height: 40px;
+    }
+}
+
+#graph-line1{
+    position: absolute;
+    z-index: 15;
+    height: 30px;
+    width: 3px;
+    background-color: grey;
+    transform: rotate(45deg);
+    left: 130px;
+    bottom:450px;  
+}
+
+#graph-line2{
+    position: absolute;
+    z-index: 15;
+    height: 30px;
+    width: 3px;
+    background-color: grey;
+    transform: rotate(135deg);
+    left: 150px;
+    top: 310px;
+
+}
+
+#graph-line3{
+    position: absolute;
+    z-index: 15;
+    height: 40px;
+    width: 3px;
+    background-color: grey;
+    transform: rotate(60deg);
+    left: 178px;
+    bottom: 443px;
+   
+}
+/* end graph */
+
+/* Start bottles with bubbles */
+.bubbles-green {
+    position: absolute;
+    z-index: 15;
+    height: 8px;
+    width: 8px;
+    border: 1px solid #3C8927;
+    border-radius: 10px;
+    left:1030px;
+    bottom: 320px;
+    opacity: 1;
+    animation: bubbly-fizz 3s infinite;
+}
+
+@keyframes bubbly-fizz {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(-60px);
+        opacity: 0;
+    }
+}
+
+#bubble2-green {
+    animation-delay: 1s;
+}
+
+#bubble3-green {
+       animation-delay: 2s;
+}
+
+#bubble4-green {
+       animation-delay: 3s;
+}
+
+#glass-green {
+    position: absolute;
+    z-index: 15;
+    height: 40px;
+    width: 20px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius:10px;
+    background-color: #00ff7f;
+    border: 2px solid grey;
+    left:1025px;
+    bottom: 310px;
+}
+
+.bubbles-red {
+    position: absolute;
+    z-index: 15;
+    height: 8px;
+    width: 8px;
+    border: 1px solid #892731;
+    border-radius: 10px;
+    left:1100px;
+    bottom: 310px;
+    opacity: 1;
+    animation: bubbly-fizz 3s infinite;
+}
+
+#bubble2-red {
+    animation-delay: 1s;
+}
+
+#bubble3-red {
+       animation-delay: 2s;
+}
+
+#bubble4-red {
+       animation-delay: 3s;
+}
+
+#glass-red {
+    position: absolute;
+    z-index: 15;
+    height: 40px;
+    width: 20px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius:10px;
+    background-color: orangered;
+    border: 2px solid grey;
+    left:1090px;
+    bottom: 310px;
+}
+/* end glass*/
+
+/* start for floor, wall and chalkboard */
+#classroom {
+    position: absolute;
+    z-index: 1;
+    left: -10px;
+    top: 140px;
+}
+
+#floor {
+    position: absolute;
+    height: 650px;
+    width: 1200px;
+    background-image: linear-gradient(#282828, #D8D8D8);
+}
+
+#wall {
+    position: absolute;
+    height: 354px;
+    width: 1200px;
+    background-color:#A8A8A8;
+}
+
+#chalk {
+    position: absolute;
+    height: 150px;
+    width: 260px;
+    background-color: #175451;
+    top: 100px;
+    left: 400px;
+    border: 10px solid #c19a6b;
+    border-bottom: 15px solid #c19a6b ;
+}
+/* end floor, wall, chalboard */
+
+/* start for tables */
+.table-tops {
+    position: absolute;
+    height: 20px;
+    width: 240px;
+    background-color: #a28047;
+}
+
+#table-top1 {
+    top: 520px;
+    left: 150px;
+}
+
+.legs {
+    position: absolute;
+    height: 100px;
+    width: 15px;
+    background-color: #a28047
+}
+
+#leg-left1 {
+    top: 520px;
+    left: 160px;
+}
+
+#leg-right1 {
+    top: 520px;
+    left: 365px;
+}
+
+#table-top2 {
+    top: 520px;
+    left: 450px;
+}
+
+#leg-left2 {
+    top: 520px;
+    left: 460px;
+}
+
+#leg-right2 {
+    top: 520px;
+    left: 665px;
+}
+
+#table-top3 {
+    top: 330px;
+    left: 950px;
+}
+
+#leg-left3 {
+    top: 330px;
+    left: 960px;
+}
+
+#leg-right3 {
+    top: 330px;
+    left: 1165px;
+}
+/* end tables*/
+
+/* start pc screens*/
+.pc-screens {
+    position: absolute;
+    height: 90px;
+    width: 150px;
+    background-color: black;
+    border: 5px solid #403e3a;
+}
+
+#pc-screen1 {
+    top: 385px;
+    left: 190px;
+    z-index: 100;
+}
+
+#pc-screen2 {
+    top: 385px;
+    left: 490px;
+    z-index: 100;
+}
+
+.stand-part1 {
+    position: absolute;
+    z-index: 9;
+    height: 50px;
+    width: 8px;
+    background-color: #403e3a; 
+}
+
+#pc-stand1 {
+    top:470px;
+    left: 265px;
+}
+
+#pc-stand2 {
+    top: 470px;
+    left: 565px;
+}
+
+.stand-part2 {
+    position: absolute;
+    z-index: 8;
+    height: 8px;
+    width: 40px;
+    background-color: #403e3a;
+    border-top-left-radius: 90%;
+    border-top-right-radius: 90%;
+}
+
+#pc-flat1 {
+    top: 520px;
+    left: 248px;
+}
+
+#pc-flat2 {
+    top: 520px;
+    left: 548px;
+}
+/* end pc screens*/
+
+/*start window with monster  */
+#window-frame {
+    position: absolute;
+    background-color: #292C34;
+    border: 6px solid white;
+    height: 120px;
+    width: 180px;
+    top: 150px;
+    left: 980px;
+    overflow: hidden;
+    
+}
+
+#window-cross1 {
+    position: absolute;
+    background-color: white;
+    width: 6px;
+    height: 120px;
+    left: 1070px;
+    top: 156px;  
+}
+
+#window-cross2 {
+    position: absolute;
+    background-color: white;
+    width: 180px;
+    height: 6px;
+    left: 986px;
+    top: 210px;
+    
+}
+
+#red-dude {
+    position: absolute;
+    height: 100px;
+    animation: windowpeek 10s infinite;
+    top: 120px;
+    left: 3px;
+}
+
+@keyframes windowpeek {
+    0% {
+        transform: translateY(0px);
+    }
+    25% {
+        transform: translateY(-20px);
+    }
+    40% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-50px);
+    }
+    60% {
+        transform: translateY(0px);
+    }
+    70% {
+        left:100px;
+    }
+    
+     
+}
+/* end window*/

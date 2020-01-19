@@ -1,0 +1,686 @@
+
+*{
+    font-family: Asap;
+    padding: 0;
+    margin: 5px;
+}
+
+/* main container start*/
+#main-container{
+    height: 800px;
+    width: 1200px;
+    position: relative;
+    margin: auto; 
+    overflow: hidden;
+    border-radius:10px;   
+}
+/* main container end*/
+
+/* header start*/
+#header{
+    width: 1200px;
+    height: 150px;
+    background-color:#292C34;
+    position: absolute;
+    margin: auto;
+   
+}
+
+#blackout {
+    position: absolute;
+    z-index: 900;
+    height: 652px;
+    width: 1200px;
+    background-color: #292C34;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    left:-5px;
+    top:143px;
+    animation: fadeout 4s forwards;
+}
+
+@keyframes fadeout{
+    85% {
+        opacity: 1;
+    }
+    99%{
+        z-index: 999;
+    }
+    100% {
+        opacity: 0;
+        z-index: 0;
+    }
+}
+
+#rocket{
+    height: 100px;
+    padding: 20px;
+    left: 540px;    
+    position: absolute;
+    cursor:pointer;
+    opacity: 0;
+    animation: rocket-hover 0.1s infinite alternate, rocket-in 3s forwards;
+}
+
+#rocket:hover {
+    height: 110px;
+     
+}
+
+@keyframes rocket-hover {
+    from{
+        transform:translateY(0px);
+    }
+    to{
+        transform: translateY(1px);
+    }
+}
+
+@keyframes rocket-in {
+    99% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.planets{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin-top: 100px;
+    position: absolute;
+}
+
+#planet-4{
+    background-image: linear-gradient(red, darkorange, red, darkorange, red);
+    box-shadow: 0px 0px 10px 10px darkred;
+    position: absolute;
+    bottom: 15px;
+    left: 1050px;
+    cursor: pointer;
+}
+
+#planet-2:hover {
+    height: 110px;
+    width: 110px;
+    animation: planet-spin 5s infinite linear;
+}
+
+#planet-2{
+    background-image: linear-gradient(to right, blue, indigo, violet);
+    box-shadow: 0px 0px 10px 10px darkblue;
+    margin-left: 800px;
+    position: absolute;
+    bottom: 15px;
+    right: 1050px;
+}
+
+#planet-4:hover {
+    height: 110px;
+    width: 110px;
+    animation: planet-spin 5s infinite linear;
+}
+
+@keyframes planet-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.stars{
+    position: absolute;
+    height: 45px;
+    animation: blinkingstars 2s infinite alternate;
+}
+
+#star-1 {
+     left: 460px;
+     top: 40px;  
+}
+
+#star-2 {
+     left: 750px;
+     top: 60px;
+     animation-delay: 0.5s;   
+}
+
+#star-3 {
+     left: 300px;
+     top: 70px;
+     animation-delay: 1s;   
+}
+
+#star-4 {
+     left: 950px;
+     top: 40px;
+     animation-delay: 1.5s;   
+}
+
+@keyframes blinkingstars {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+
+#rocket-fly {
+    position: absolute;
+    z-index: 999;
+    left: 460px;
+    top: 1500px;
+    animation: rocket-flyover 5s normal;
+}
+
+@keyframes rocket-flyover {
+    from {
+        transform: translateY(0px)
+    }
+    to {
+        transform:translateY(-2000px) ;
+    }
+}
+/* header end*/
+
+/* background */
+#wall {
+    position: absolute;
+    top: 145px;
+    width: 1205px;
+    height: 350px;
+    background-color: #75B1FF;
+    left: -5px;
+}
+
+#floor {
+    position: absolute;
+    width: 1200px;
+    height: 300px;
+    background-image: linear-gradient(#99CCFF, white);
+    bottom: 0px;
+    left: -5px;
+}
+/* background end*/
+
+/* desk start */
+#desk {
+    position: absolute;
+    z-index: 2;
+    height: 200px;
+    width: 400px;
+    background-color: burlywood;
+    box-shadow: 5px 1px 5px black;
+    top: 450px;
+    left: 30px;
+    animation: deskmove 2s infinite alternate;
+}
+
+@keyframes deskmove {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(15px);
+    }
+}
+    
+#sign {
+    position: absolute;
+    top: 30px;
+    left: 70px;
+}
+
+#sign-border{
+    position: absolute;
+    z-index: 5;
+    height: 70px;
+    width: 220px;
+    background-color: skyblue;
+    border: 5px solid black;
+    border-radius: 20px;
+}
+
+#sign-text{
+    position: absolute;
+    z-index: 10;
+    left: 17px;
+    top: 10px;
+    font-family: monospace;
+    width: 200px;
+    text-align: center;
+}
+/* desk end */
+
+/* spacey start */
+#spacey {
+    position: absolute;
+    z-index: 1;
+    height: 500px;
+    top: 350px;
+    left: 410px;
+}
+
+#spacey-speak{
+    position: absolute;
+    z-index: 500;
+    opacity: 0;
+    top: 310px;
+    left: 690px;
+    animation: spacey-speak 20s 5s infinite;
+}
+
+#spacey-speak-bubble{
+    position: absolute;
+    top: 30px;
+    height: 125px;
+    width: 200px;
+    background-color: white;
+    border-radius: 40%;
+}
+
+#spacey-speak-bubblepoint{
+    position: absolute;
+    top: 75px;
+    height: 80px;
+    width: 80px;
+    background-color: white;
+}
+
+#spacey-speak-text{
+    position: absolute;
+    top: 53px;
+    left: 29px;
+    width: 150px;
+    font-family: monospace;
+    font-size: 20px;
+    z-index: 600;
+    color: black;
+}
+
+@keyframes spacey-speak {
+    0%{opacity: 1;}
+    5%{opacity: 1;}
+    10%{opacity: 1;}
+    15%{opacity: 0;}
+    100%{opacity: 0;}
+}
+
+#spacey-speak2{
+    position: absolute;
+    z-index: 500;
+    opacity: 0;
+    top: 310px;
+    left: 690px;
+    animation: spacey-speak 20s 15s infinite;
+
+    
+}
+
+#spacey-speak-bubble2{
+    position: absolute;
+    top: 30px;
+    height: 125px;
+    width: 200px;
+    background-color: white;
+    border-radius: 40%;
+}
+
+#spacey-speak-bubblepoint2{
+    position: absolute;
+    top: 70px;
+    height: 80px;
+    width: 80px;
+    background-color: white;
+}
+
+#spacey-speak-text2{
+    position: absolute;
+    top: 90px;
+    left: 35px;
+    width: 150px;
+    font-family: monospace;
+    font-size: 20px;
+    z-index: 600;
+    color: black;
+}
+
+@keyframes spacey-speak2 {
+    0%{opacity: 0;}
+    5%{opacity: 1;}
+    10%{opacity: 1;}
+    15%{opacity: 0;}
+    100%{opacity: 0;}
+}
+/* spacey end*/
+  
+/* cafeteria-robot*/
+#robot {
+    position: absolute;
+    z-index: 1;
+    height: 180px;
+    top: 330px;
+    left: 200px;
+    animation: robotmove 20s 7s infinite;
+}
+
+@keyframes robotmove {
+    0%{top: 330px; left: 200px;}
+    5%{top: 150px; left: 200px;}
+    15%{top: 200px; left: 900px;}
+    25%{top: 430px; left: 900px;}
+    30%{top: 200px; left: 900px;}
+    40%{top: 330px; left: 200px;}
+    100%{top:330px; left: 200px;}
+}
+/* cafeteria-robot end*/
+    
+/* floating-food start*/
+#burger-div {
+    position: absolute;
+    top:333px;
+    animation: burgermove 0.5s infinite alternate;
+}
+
+@keyframes burgermove {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(4deg);
+    }
+}
+
+#topBun{
+    background-color: #F6A13F;
+    width: 60px;
+    height: 10px;
+    top:3px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+ 
+#patty{
+    background-color: #452C2B;
+    width: 65px;
+    height: 12px;
+    border-radius: 10px;
+}
+ 
+#bottomBun{
+    background-color: #F6A13F;
+    width: 60px;
+    height: 10px;
+    margin-left: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#donut{
+    position: absolute;
+    left: 310px;
+    top: 230px;
+    animation: donutmove 20s 7s infinite;
+}
+
+@keyframes donutmove {
+    0%{top: 230px; left: 310px;}
+    5%{top: 230px; left: 310px;}
+    15%{top: 290px; left: 1000px;}
+    25%{top: 540px; left: 1000px;}
+    30%{top: 540px; left: 1000px;}
+    40%{top: 530px; left: 1000px;}
+    100%{top:540px; left: 1000px;}
+}
+    
+
+
+#donut-beige{
+    position: absolute;
+    width: 25px;
+    height: 20px;
+    border: 20px solid beige;
+    border-radius: 50%;
+     
+}
+
+#donut-pink{
+    position: absolute;
+    z-index: 100;
+    width: 20px;
+    height: 20px;
+    border: 20px solid pink;
+    border-radius: 50%;
+}
+
+#sprinkle1{
+    position: absolute;
+    z-index: 150;
+    left: 15px;
+    top: 10px;
+    height: 6px;
+    width: 2px;
+    background-color: dodgerblue;
+    transform: rotate(20deg);
+    
+}
+
+#sprinkle2{
+    position: absolute;
+    z-index: 150;
+    left: 40px;
+    top: 10px;
+    height: 6px;
+    width: 2px;
+    background-color: deeppink;
+    transform: rotate(40deg);  
+}
+
+#sprinkle3 {
+    position: absolute;
+    z-index: 150;
+    left: 50px;
+    top: 30px;
+    height: 6px;
+    width: 2px;
+    background-color: aqua;
+    transform: rotate(40deg); 
+}
+
+#sprinkle4{
+    position: absolute;
+    z-index: 150;
+    left: 10px;
+    top: 35px;
+    height: 6px;
+    width: 2px;
+    background-color: greenyellow;
+    transform: rotate(80deg); 
+}
+
+#sprinkle5{
+    position: absolute;
+    left: 30px;
+    top: 47px;
+    z-index: 150;
+    height: 6px;
+    width: 2px;
+    background-color: darkred;
+    transform: rotate(40deg); 
+}
+
+#bread{
+    position: absolute;
+    z-index: 20;
+    height: 50px;
+    width: 100px;
+    background-color: sandybrown;
+    border: 2px solid brown;
+    top: 290px;
+    left: 90px;
+    transform: rotate(-30deg);
+    border-top-right-radius: 70%;
+    border-top-left-radius: 70%;
+    border-bottom-right-radius: 20%;
+    border-bottom-left-radius: 20%;
+    animation: breadmove 0.3s infinite alternate;
+}
+
+@keyframes breadmove {
+     from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(5px);
+    }
+}
+
+#bread-stripe-1{
+    position: absolute;
+    height: 25px;
+    width: 5px;
+    background-color: brown;
+    left: 30px;
+    border-radius: 30%;
+}
+
+#bread-stripe-2{
+    position: absolute;
+    height: 25px;
+    width: 5px;
+    background-color: brown;
+    left: 50px;
+    border-radius: 30%;
+}
+
+#bread-stripe-3{
+    position: absolute;
+    height: 25px;
+    width: 5px;
+    background-color: brown;
+    left: 70px;
+    border-radius: 30%;
+}
+
+#coffe-cup{
+    position: absolute;
+    z-index: 10;
+    top: 190px;
+    left: 210px;
+    animation: coffeemove 0.5s infinite alternate;
+}
+
+@keyframes coffeemove {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(4deg);
+    }
+}
+
+#cup{
+    width: 30px;
+    height: 45px;
+    background-color: beige;
+    border: 10px solid beige;
+    border-radius: 40%;
+    position: absolute; 
+}
+
+#handle{
+    position: absolute;
+    left: 30px;
+    top: 15px;
+    width: 20px;
+    height: 15px;
+    border: 8px solid beige;
+    border-radius: 50%;
+}
+
+#coffee{
+    top: 3px;
+    left: 6px;
+    width: 22px;
+    height: 10px;
+    border: 8px solid #362514;
+    background-color: #362514;
+    border-radius: 50%;
+    position: absolute;
+}
+
+#plate-plate{
+    position: absolute;
+    top: 200px;
+    left: 30px;
+    animation: platemove 0.3s infinite alternate;
+}
+
+@keyframes platemove {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(4deg);
+    }
+}
+
+#plate{
+    position: absolute;
+    width: 60px;
+    height: 22px;
+    background-color: beige;
+    border: 10px solid beige;
+    border-radius: 50%;   
+}
+
+#circle1{
+    position: absolute;
+    z-index: 100;
+    top: 6px;
+    left: 9px;
+    width: 60px;
+    height: 28px;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+/* floating-food start*/
+
+/* table start*/
+#table{
+    position: absolute;
+    top: 600px;
+    left:800px;
+}
+
+#table-top{
+    position: absolute;
+    z-index: 80;
+    height: 35px;
+    width: 300px;
+    background-image: linear-gradient(saddlebrown,burlywood);
+}
+
+#table-leg-1{
+    position: absolute;
+    z-index: 60;
+    height: 160px;
+    width: 25px;
+    background-image: linear-gradient(saddlebrown, burlywood);
+}
+
+#table-leg-2{
+    position: absolute;
+    z-index: 60;
+    left: 275px;
+    height: 160px;
+    width: 25px;
+    background-image: linear-gradient(saddlebrown, burlywood);
+}
+/* table end*/

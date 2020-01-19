@@ -1,0 +1,866 @@
+*{
+    margin: 0;
+}
+
+/* Main container start */
+#main-container{
+    position: relative;
+    width: 1200px;
+    height: 800px;
+    border: black solid 4px;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: auto;
+}
+/* Main container end */
+
+/* Rocket that flyes over black page start */
+#blackout {
+    position: absolute;
+    z-index: 900;
+    height: 652px;
+    width: 1200px;
+    background-color: #292C34;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    top:150px;
+    animation: fadeout 4s forwards;
+}
+
+@keyframes fadeout{
+    85% {
+        opacity: 1;
+    }
+    99%{
+        z-index: 999;
+    }
+    100% {
+        opacity: 0;
+        z-index: 0;
+    }
+}
+
+#rocket-fly {
+    position: absolute;
+    z-index: 2000;
+    left: 460px;
+    top: 1500px;
+    animation: rocket-flyover 5s normal;
+}
+
+@keyframes rocket-flyover {
+    from {
+        transform: translateY(0px)
+    }
+    to {
+        transform:translateY(-2000px) ;
+    }
+}   
+/* Rocket that flyes over black page end */
+
+/* Header start */
+#header{
+    width: 1200px;
+    height: 150px;
+    background-color:#292C34;
+    position: absolute;
+    z-index: 1500;
+    margin: auto;
+}
+
+
+#rocket{
+    height: 100px;
+    left: 540px;   
+    position: absolute;
+    cursor:pointer;
+    opacity: 0;
+    animation: rocket-hover 0.1s infinite alternate, rocket-in 3s forwards;
+    padding: 20px;
+}
+
+#rocket:hover {
+    height: 110px;
+
+}
+
+@keyframes rocket-hover {
+    from{
+        transform:translateY(0px);
+    }
+    to{
+        transform: translateY(1px);
+    }
+}
+
+@keyframes rocket-in {
+    99% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.planets{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin-top: 100px;
+    position: absolute;
+}
+
+#planet-3{
+    background-image: linear-gradient(to bottom right, orange, yellow, orange, yellow, orange, yellow, orange, yellow, orange, yellow);
+    box-shadow: 0px 0px 10px 10px gold;
+    position: absolute;
+    margin-top: 20px;
+    left: 1050px;
+}
+
+#planet-1:hover {
+    height: 110px;
+    width: 110px;
+    animation: planet-spin 5s infinite linear;
+}
+
+#planet-1{
+
+    background-image: radial-gradient(yellow, green);
+    box-shadow: 0px 0px 10px 10px darkgreen;
+    position: absolute;
+    margin-top: 20px;
+    right: 1050px;
+}
+
+#planet-3:hover {
+    height: 110px;
+    width: 110px;
+    animation: planet-spin 5s infinite linear;
+}
+
+@keyframes planet-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.stars-img{
+    position: absolute;
+    height: 45px;
+    animation: blinkingstars 2s infinite alternate;
+}
+
+#star-1-img {
+     left: 460px;
+     top: 40px; 
+}
+
+#star-2-img {
+     left: 750px;
+     top: 60px;
+     animation-delay: 0.5s;   
+}
+
+#star-3-img {
+     left: 300px;
+     top: 70px;
+     animation-delay: 1s;   
+}
+
+#star-4-img {
+     left: 950px;
+     top: 40px;
+     animation-delay: 1.5s;   
+}
+
+@keyframes blinkingstars {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}       
+/* header end */ 
+
+/* background start */
+#wall{
+    position: absolute;
+    top: 100px;
+    z-index: 200;
+    height: 400px;
+    width: 1200px;
+   background-color: darkgrey;
+}
+
+#floor{
+    position: absolute;
+    z-index: 100;
+    top: 400px;
+    height: 400px;
+    width: 1200px;
+    background-image:linear-gradient(#606060,white);
+}
+/* background end */
+
+/* Spacey at table start */
+#monster-at-table{
+    position: absolute;
+    z-index: 450;
+    left: 450px;
+    top: 600px;
+}
+
+#table-top{
+    position: absolute;
+    z-index: 400;
+    width: 300px;
+    height: 30px;
+    background-color: saddlebrown;
+}
+
+#table-leg-1{
+    position: absolute;
+    left: 20px;
+    width: 20px;
+    height: 150px;
+    background-color: saddlebrown;
+}
+
+#table-leg-2{
+    position: absolute;
+    left: 260px;
+    width: 20px;
+    height: 150px;
+    background-color: saddlebrown;
+}
+
+#chair-top{
+    position: absolute;
+    z-index: 450;
+    left: 65px;
+    top: 50px;
+    width: 170px;
+    height: 40px;
+    background-color: saddlebrown;
+    border-radius: 50px;
+}
+
+#chair-leg-1{
+    position: absolute;
+    left: 95px;
+    top: 80px;
+    width: 10px;
+    height: 60px;
+    background-color: saddlebrown;
+}
+
+#chair-leg-2{
+    position: absolute;
+    left: 190px;
+    top: 80px;
+    width: 10px;
+    height: 60px;
+    background-color: saddlebrown;
+}
+
+
+#guide{
+    position: absolute;
+    height: 500px;
+    top: -334px;
+    left: -100px;
+    z-index: 200;
+}
+/* Spacey at table end */
+
+/* Bookshelfs start */
+#bookshelf-1{
+    position: absolute;
+    left:30px;
+    top: 200px;
+    z-index: 300;
+    height: 400px;
+    width: 300px;
+    background-color: sandybrown;
+    box-shadow: -20px -5px 8px grey;
+    animation: bookshelf-shake 25s 16s infinite;
+}
+
+@keyframes bookshelf-shake{
+    0%{top: 210px; border: purple 3px solid;}
+    0.5%{top: 190px; border: purple 3px solid;}
+    1%{top: 210px; border: purple 3px solid;}
+    1.5%{top: 190px; border: purple 3px solid;}
+    2%{top: 210px; border: purple 3px solid;}
+    2.5%{top: 190px; border: purple 3px solid;}
+    3%{top: 210px; border: purple 2px solid;}
+    3.5%{top: 200px; border: 0px;}
+    100%{top: 200px; border: 0px;}
+
+}
+
+#bookshelf-2{
+    position: absolute;
+    left: 870px;
+    top: 200px;
+    z-index: 300;
+    height: 400px;
+    width: 300px;
+    background-color: sandybrown;
+    box-shadow: -20px -5px 8px grey;
+
+}
+
+
+.bookshelf-shelf{
+    position: absolute;
+    height: 100px;
+    width: 250px;
+    background-color: saddlebrown;
+}
+
+#bookshelf-shelf1{
+    top: 25px;
+    left: 25px;
+}
+
+#bookshelf-shelf2{
+    top: 150px;
+    left: 25px;
+}
+
+#bookshelf-shelf3{
+    top: 280px;
+    left: 25px;
+}
+
+#bookshelf-shelf4{
+    top: 25px;
+    left: 25px;
+}
+
+#bookshelf-shelf5{
+    top: 150px;
+    left: 25px;
+}
+
+#bookshelf-shelf6{
+    top: 280px;
+    left: 25px;
+}
+
+#subject-tech{
+    display: none;
+    position: absolute;
+    top: 400px;
+}
+
+#subject-med{
+    display: none;
+    position: absolute;
+    top: 280px;
+}
+
+#subject-economy{
+    display: none;
+    position: absolute;
+    top: 150px;
+}
+
+.subject{
+    position: absolute;
+    font-family: monospace;
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+    z-index: 400;
+}
+
+
+
+#bookshelf-shelf1:hover{
+    opacity: 0.5;
+}
+
+#bookshelf-shelf1:hover #subject-tech{
+    display: block;
+}
+
+#bookshelf-shelf2:hover{
+    opacity: 0.5;
+}
+
+#bookshelf-shelf2:hover #subject-med{
+    display: block;
+}
+
+#bookshelf-shelf3:hover{
+    opacity: 0.5;
+}
+
+#bookshelf-shelf3:hover #subject-economy{
+    display: block;
+}
+
+.book{
+    position: absolute;
+    width: 20px;
+    height: 70px;
+    box-shadow: 5px 0px 5px black;
+}
+
+#book-1{
+    background-color: #660000;
+    left: 40px;
+    top: 30px;
+}
+
+#book-2{
+    background-color: #990000;
+    left: 70px;
+    top: 30px;
+}
+
+#book-3{
+    background-color: #CC0000;
+    left: 100px;
+    top: 30px;
+}
+#book-4{
+    background-color: #FF0000;
+    left: 130px;
+    top: 30px;
+}
+#book-5{
+    background-color: #FF3333;
+    left: 160px;
+    top: 30px;
+}
+#book-6{
+    background-color: #FF6666;
+    left: 190px;
+    top: 30px;
+}
+
+
+#book-7{
+    background-color: #000066;
+    left: 40px;
+    top: 30px;
+}
+
+#book-8{
+    background-color: #000099;
+    left: 70px;
+    top: 30px;
+}
+
+#book-9{
+    background-color: #0000CC;
+    left: 100px;
+    top: 30px;
+}
+#book-10{
+    background-color: #3333FF;
+    left: 130px;
+    top: 30px;
+}
+#book-11{
+    background-color: #6666FF;
+    left: 160px;
+    top: 30px;
+}
+#book-12{
+    background-color: #9999FF;
+    left: 190px;
+    top: 30px;
+}
+
+#book-13{
+    background-color: #FFB300;
+    left: 40px;
+    top: 30px;
+}
+
+#book-14{
+    background-color: #FFBC00;
+    left: 70px;
+    top: 30px;
+}
+
+#book-15{
+    background-color: #FFCF0D;
+    left: 100px;
+    top: 30px;
+}
+#book-16{
+    background-color: #FCDF50;
+    left: 130px;
+    top: 30px;
+}
+#book-17{
+    background-color: #FCF270;
+    left: 160px;
+    top: 30px;
+}
+#book-18{
+    background-color: #FDFAA2;
+    left: 190px;
+    top: 30px;
+}
+
+#book-19{
+    background-color: #660000;
+    left: 40px;
+    top: 30px;
+}
+
+#book-20{
+    background-color: #990000;
+    left: 70px;
+    top: 30px;
+}
+
+#book-21{
+    background-color: #CC0000;
+    left: 100px;
+    top: 30px;
+}
+#book-22{
+    background-color: #FF0000;
+    left: 130px;
+    top: 30px;
+}
+#book-23{
+    background-color: #FF3333;
+    left: 160px;
+    top: 30px;
+}
+#book-24{
+    background-color: #FF6666;
+    left: 190px;
+    top: 30px;
+}
+
+
+#book-25{
+    background-color: #000066;
+    left: 40px;
+    top: 30px;
+}
+
+#book-26{
+    background-color: #000099;
+    left: 70px;
+    top: 30px;
+}
+
+#book-27{
+    background-color: #0000CC;
+    left: 100px;
+    top: 30px;
+}
+#book-28{
+    background-color: #3333FF;
+    left: 130px;
+    top: 30px;
+}
+#book-29{
+    background-color: #6666FF;
+    left: 160px;
+    top: 30px;
+}
+#book-30{
+    background-color: #9999FF;
+    left: 190px;
+    top: 30px;
+}
+
+#book-31{
+    background-color: #FFB300;
+    left: 40px;
+    top: 30px;
+}
+
+#book-32{
+    background-color: #FFBC00;
+    left: 70px;
+    top: 30px;
+}
+
+#book-33{
+    background-color: #FFCF0D;
+    left: 100px;
+    top: 30px;
+}
+#book-34{
+    background-color: #FCDF50;
+    left: 130px;
+    top: 30px;
+}
+#book-35{
+    background-color: #FCF270;
+    left: 160px;
+    top: 30px;
+}
+#book-36{
+    background-color: #FDFAA2;
+    left: 190px;
+    top: 30px;
+}
+
+
+
+/* Bookshelfs end */
+
+/* Windows with star background start */
+#window-1-box{
+    position: absolute;
+    top: 200px;
+    left: 360px;
+    height: 180px;
+    width: 210px;
+    z-index: 200;
+    background-color: black;
+     border: 10px solid white;
+    box-shadow: 7px 4px 1px grey;
+}
+
+.window-border-y{
+    position: absolute;
+    left: 105px;
+    z-index: 400;
+    height: 180px;
+    width: 6px;
+    background-color: white;
+}
+
+.window-border-x{
+    position: absolute;
+    top: 85px;
+    z-index: 400;
+    height: 6px;
+    width: 210px;
+    background-color: white;
+}
+
+#space-1{
+    position: absolute;
+    height: 180px;
+    width: 210px;
+    z-index: 300;
+    animation: stars-fade 2s infinite;
+}
+
+#window-2-box{
+    position: absolute;
+    top: 200px;
+    left: 610px;
+    height: 180px;
+    width: 210px;
+    z-index: 300;
+    background-color: black;
+    border: 10px solid white;
+    box-shadow: 7px 4px 1px grey;
+
+}
+
+@keyframes stars-fade{
+    0% {opacity: 0.3;}
+    25% {opacity: 0.7;}
+    50% {opacity: 1;}
+    100% {opacity: 0.3;}
+}
+
+#space-2{
+    position: absolute;
+    height: 180px;
+    width: 210px;
+    z-index: 300;
+    animation: stars-fade 1.8s infinite;
+}
+/* Windows with star background end */
+
+/* Librarian-lady start */
+#librarian-pic{
+    position: absolute;
+    z-index: 700;
+    height: 400px;
+    left: 990px;
+    top: 400px;
+    animation: librarian-move 25s 6s  infinite;
+}
+
+@keyframes librarian-move{
+    0%{left: 990px;}
+    5%{left: 750px;}
+    15%{left: 750px;}
+    20%{left: 990px;}
+    100% {left: 990px;}
+}
+
+#lady-speak{
+    position: absolute;
+    z-index: 500;
+    opacity: 0;
+    top: 350px;
+    left: 650px;
+    animation: lady-speaking 25s 6s  infinite;
+
+}
+
+#lady-speak-bubble{
+    position: absolute;
+    height: 80px;
+    width: 100px;
+    background-color: white;
+    border-radius: 40%;
+}
+
+#lady-speak-bubblepoint{
+    position: absolute;
+    top: 30px;
+    left: 50px;
+    height: 50px;
+    width: 50px;
+    background-color: white;
+}
+
+#lady-speak-text{
+    position: absolute;
+    top: 27px;
+    left: 15px;
+    font-family: monospace;
+    font-size: 20px;
+    z-index: 600;
+    color: black;
+}
+
+@keyframes lady-speaking {
+    0%{opacity: 0;}
+    5%{opacity: 1;}
+    15%{opacity: 1;}
+    20%{opacity: 0;}
+    100% {opacity: 0;}
+}
+/* Librarian-lady end */
+
+/* Monster start */
+#monster1{
+    position: absolute;
+    height: 150px;
+    left: 260px;
+    top: 370px;
+    z-index: 250;
+    animation: monster-move 25s 4s linear infinite;
+
+}
+
+@keyframes monster-move{
+    0%{left: 260px;}
+    5%{left: 350px;}
+    15%{left:350px;}
+    20%{left: 260px;}
+    100% {left: 260px;}
+}
+
+#monster-speak{
+    position: absolute;
+    z-index: 500;
+    opacity: 0;
+    top: 270px;
+    left: 470px;
+    animation: monster-speaking 25s 4s linear infinite;
+
+}
+
+#monster-speak-bubble{
+    position: absolute;
+    height: 80px;
+    width: 100px;
+    background-color: white;
+    border-radius: 40%;
+}
+
+#monster-speak-bubblepoint{
+    position: absolute;
+    top: 30px;
+    height: 50px;
+    width: 50px;
+    background-color: white;
+}
+
+#monster-speak-text{
+    position: absolute;
+    top: 20px;
+    left: 6px;
+    width: 100px;
+    font-family: monospace;
+    font-size: 11px;
+    z-index: 600;
+    color: black;
+}
+
+@keyframes monster-speaking{
+     0%{opacity: 0;}
+    5%{opacity: 1;}
+    15%{opacity: 1;}
+    20%{opacity: 0;}
+    100% {opacity: 0;}
+}
+/* Monster end */
+
+/* Spacey start */
+#spacey-speak{
+    position: absolute;
+    z-index: 500;
+    opacity: 0;
+    top: 270px;
+    left: 690px;
+    animation: spacey-speaking 25s 7s linear infinite;
+
+
+}
+
+#spacey-speak-bubble{
+    position: absolute;
+    height: 150px;
+    width: 200px;
+    background-color: white;
+    border-radius: 40%;
+}
+
+#spacey-speak-bubblepoint{
+    position: absolute;
+    top: 70px;
+    height: 80px;
+    width: 80px;
+    background-color: white;
+}
+
+#spacey-speak-text{
+    position: absolute;
+    top: 20px;
+    left: 25px;
+    width: 150px;
+    font-family: monospace;
+    font-size: 20px;
+    z-index: 600;
+    color: black;
+}
+
+@keyframes spacey-speaking{
+     0%{opacity: 0;}
+    5%{opacity: 0;}
+    15%{opacity: 0;}
+    20%{opacity: 1;}
+    30%{opacity: 1}
+    35%{opacity: 0;}
+    100% {opacity: 0;}
+}
+/* Spacey end */

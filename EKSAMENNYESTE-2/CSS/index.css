@@ -1,0 +1,757 @@
+body{
+    background-color:silver;
+    font-family: sans-serif;
+}
+/*Start main container*/
+/*Start window frame*/
+#main-container{
+    width: 1200px;
+    height: 800px;
+    border: 1px solid black;
+    border-radius: 25%;
+    box-shadow: 0px 0px 5px 10px black;
+    margin: auto;
+    background-color: black;
+    position: relative;
+}
+
+#window{
+    border: 85px solid;
+    border-color: grey;
+    box-shadow: 0px 0px 20px 10px grey;
+    width: 1000px;
+    height: 600px;
+    border-radius: 25%;
+    margin: 10px;
+    position: absolute;
+}
+/*Start window frame sign*/
+#sign{
+    position: absolute;
+    height: 50px;
+    width: 500px;
+    background-image: linear-gradient(#505050,silver);
+    box-shadow: 2px 4px 6px 2px black;
+    border: 2px solid black;
+    right: 350px;
+    top: 25px;
+}
+#sign-txt{
+    position: absolute;
+    bottom: -15px;
+    left: 35px;
+    text-shadow: 0 0 5px silver;
+}
+/*End window frame sign*/
+/*End window frame*/
+
+/*Start stars*/
+.star{
+    position: absolute;
+    height: 40px;}
+
+#star-1{
+    position: absolute;
+    left: 700px;
+    bottom: 500px;
+    animation: blinkingStar1 2s ease-in-out infinite alternate;
+    animation-delay: 1s;
+}
+@keyframes blinkingStar1{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+#star-2{
+    position: absolute;
+    left: 600px;
+    bottom: 200px;
+    animation: blinkingStar2 2s ease-in-out infinite alternate;
+    animation-delay: 1.5s
+}
+@keyframes blinkingStar2{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+#star-3{
+    position: absolute;
+    left: 100px;
+    bottom: 530px;
+    animation: blinkingStar3 2s ease-in-out infinite alternate;
+    animation-delay: 2s;
+}
+@keyframes blinkingStar3{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+#star-4{
+    position: absolute;
+    left: 300px;
+    bottom: 500px;
+    animation: blinkingStar4 2s ease-in-out infinite alternate;
+    animation-delay: 2.5s;
+}
+@keyframes blinkingStar4{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+#star-5{
+    position: absolute;
+    left: 300px;
+    bottom: 250px;
+    animation: blinkingStar5 2s ease-in-out infinite alternate;
+    animation-delay: 3s;
+}
+@keyframes blinkingStar5{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+#star-6{
+    position: absolute;
+    left: 100px;
+    bottom: 200px;
+    animation: blinkingStar6 2s ease-in-out infinite alternate;
+    animation-delay: 3.5s;
+}
+@keyframes blinkingStar6{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+#star-7{
+    position: absolute;
+    left: 850px;
+    bottom: 250px;
+    animation: blinkingStar7 2s ease-in-out infinite alternate;
+    animation-delay: 4s;
+}
+@keyframes blinkingStar7{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+#star-8{
+    position: absolute;
+    left: 540px;
+    animation: blinkingStar8 2s ease-in-out infinite alternate;
+    animation-delay: 4.5s
+}
+@keyframes blinkingStar8{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+/*End stars*/
+
+/*Start control panel*/
+#control-panel{
+    height: 100px;
+    width: 300px;
+    border: 2px solid black;
+    background-image: linear-gradient(#505050, silver);
+    position: absolute;
+    bottom: -80px;
+    left: 350px;
+    box-shadow: 0px 2px 5px 3px black;
+}
+/*Start stop button*/
+#control-btn1{
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    background-color: red;
+    border-radius: 50%;
+    left: 135px;
+    bottom: 50px;
+    box-shadow: 0px 8px 6px 0px darkred;
+}
+#p-stop{
+    position: absolute;
+    font-size: 10px;
+    left: 3px;
+    color: white;
+}
+#control-btn1:active #stop-btn-light{
+    display: block;
+}
+
+#stop-btn-light{
+    box-shadow: 0px 0px 15px 15px red, 0 0 30px 30px red, 0 0 30px 10px red;
+    opacity: 0.5;
+    display: none;
+}
+
+/*start black out function */
+.black-out{
+    display: none;
+}
+
+.black-out:target{
+    display: table;
+}
+
+#black-out1{
+    position: absolute;
+    height: 600px;
+    width: 1000px;
+    border-radius: 20%;
+    top: 0px;
+    left: 0px;
+    background-color: black;
+    animation: black-out 2s linear;
+}
+@keyframes black-out{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+/*end black out function*/
+/*End stop button*/
+
+/*start control panel*/
+/*start panel part 1*/
+#panel-part1{
+    position: absolute;
+    height: 80px;
+    width: 100px;
+    background-color: dimgray;
+    border: 2px solid gray;
+    box-shadow: 0px 2px 2px 0px gray;
+    left: 20px;
+    bottom: 10px;
+}
+
+#btn2-1{
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    background-color: lightgray;
+    left: 10px;
+    bottom:60px;
+    box-shadow: 0px 3px 2px 2px darkgray;
+    text-align: center;
+}
+#btn2-1-planet{
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-image: radial-gradient(yellow, green);
+    border: 1px solid green;
+    left: 1.5px;
+    top: 1px;
+}
+
+.txt-planet1{
+    display: none;
+}
+.txt-planet1:target{
+    display: table;
+}
+
+#txt-planet1{
+    position: absolute;
+    top: 230px;
+    left: 160px;
+    color: white;
+    text-shadow: 0 0 5px black;
+    font-family: monospace;
+    animation: show-txt-planet-1 3s ease;
+}
+
+@keyframes show-txt-planet-1{
+    100%{transform: scale(1.5);}
+}
+
+
+#btn2-2{
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    background-color: lightgray;
+    left: 40px;
+    bottom: 60px;
+    box-shadow: 0px 3px 2px 2px darkgray;
+    text-align: center;
+}
+#btn2-2-planet{
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-image: linear-gradient(to right, blue, indigo, violet);
+    border: 1px solid blue;
+    left: 1.5px;
+    top: 1px;
+}
+
+.txt-planet2{
+    display: none;
+}
+
+.txt-planet2:target{
+    display: table;
+}
+
+#txt-planet2{
+    position: absolute;
+    top: 230px;
+    left: 360px;
+    font-family: monospace;
+    color: white;
+    text-shadow: 0 0 5px black;
+    animation: show-text-planet-2 3s ease;
+}
+@keyframes show-text-planet-2{
+    100%{transform: scale(1.5);}
+}
+
+#btn2-3{
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    background-color: lightgray;
+    left: 10px;
+    bottom: 30px;
+    box-shadow: 0px 3px 2px 2px darkgray;
+    text-align: center;
+}
+#btn2-3-planet{
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-image: linear-gradient(to bottom right, orange, yellow, orange, yellow, orange, yellow, orange, yellow, orange, yellow);
+    border: 1px solid yellow;
+    left: 1.5px;
+    top: 1px;
+}
+
+.txt-planet3{
+    display: none;
+}
+
+.txt-planet3:target{
+    display: table;
+}
+
+#txt-planet3{
+    position: absolute;
+    top: 230px;
+    left: 520px;
+    font-family: monospace;
+    color: white;
+    text-shadow: 0 0 5px black;
+    animation: show-text-planet-3 3s ease;
+}
+@keyframes show-text-planet-3{
+    100%{transform: scale(1.5);}
+}
+
+#btn2-4{
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    background-color: lightgray;
+    left: 40px;
+    bottom: 30px;
+    box-shadow: 0px 3px 2px 2px darkgray;
+    text-align: center;
+}
+#btn2-4-planet{
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-image: linear-gradient(red, darkorange, red, darkorange, red);
+    border: 1px solid red;
+    left: 1.5px;
+    top: 1px;
+}
+
+.txt-planet4{
+    display: none;
+}
+
+.txt-planet4:target{
+    display: table;
+}
+
+#txt-planet4{
+    position: absolute;
+    top: 230px;
+    left: 720px;
+    font-family: monospace;
+    color: white;
+    text-shadow: 0 0 5px black;
+    animation: show-text-planet-4 3s ease;
+}
+@keyframes show-text-planet-4{
+    100%{transform: scale(1.5);}
+}
+
+#btn2-5{
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    background-color: lightgray;
+    left: 70px;
+    bottom: 60px;
+    box-shadow: 0px 3px 2px 2px darkgray;
+    text-align: center;
+}
+#btn2-5-planet{
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-image: linear-gradient(to bottom left, brown, orange, lightblue, yellow, brown);
+    border: 1px solid orange;
+    left: 1.5px;
+    top: 1px;
+}
+
+.txt-planet5{
+    display: none;
+}
+
+.txt-planet5:target{
+    display: table;
+}
+
+#txt-planet5{
+    position: absolute;
+    top: 230px;
+    left: 900px;
+    font-family: monospace;
+    color: white;
+    text-shadow: 0 0 5px black;
+    animation: show-text-planet-5 3s ease;
+}
+@keyframes show-text-planet-5{
+    100%{transform: scale(1.5);}
+}
+
+#panel-part2{
+    position: absolute;
+    height: 80px;
+    width: 100px;
+    background-color: dimgray;
+    border: 2px solid gray;
+    left: 180px;
+    bottom: 10px;
+}
+/*end control panel part 1*/
+
+/*start control panel part 2*/
+/*Start joystick 1*/
+#btn3-1{
+    position: absolute;
+    width: 25px;
+    height: 15px;
+    background-color: black;
+    box-shadow: 0px 1px 2px 0px black;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom: 0;
+    bottom: 10px;
+    left: 10px;
+}
+
+#btn3-2{
+    position: absolute;
+    height: 25px;
+    width: 3px;
+    background-color: gray;
+    bottom: 20px;
+    left: 21px;
+}
+
+#btn3-3{
+    position: absolute;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background-color: black;
+    left: 17px;
+    bottom: 40px;
+}
+/*End joystick 1*/
+/*Start joystick 2*/
+#btn3-4{
+    position: absolute;
+    width: 25px;
+    height: 15px;
+    background-color: black;
+    box-shadow: 0px 1px 2px 0px black;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom: 0;
+    bottom: 10px;
+    left: 60px;
+}
+
+#btn3-5{
+    position: absolute;
+    height: 25px;
+    width: 3px;
+    background-color: gray;
+    bottom: 20px;
+    left: 71px;
+}
+
+#btn3-6{
+    position: absolute;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background-color: black;
+    bottom: 40px;
+    left: 67px;
+}
+/*End joystick 2*/
+/*end control panel part 2*/
+/*End control panel*/
+
+/*Start planets*/
+.planets{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    margin-top: 100px;
+    position: absolute;
+    transition-property: transform;
+    transition-duration: 2s;
+    animation: fade-in-planets 5s ease;
+}
+
+@keyframes fade-in-planets{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+.planets:hover{
+    transform: scale(1.5) rotate(360deg);
+}
+/*Start Planet 1*/
+#planet-1{
+    background-image: radial-gradient(yellow, green);
+    left: 50px;
+    box-shadow: 0px 0px 10px 10px darkgreen;
+    position: absolute;
+    animation: movePlanet-1 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes movePlanet-1{
+    0%{top: 1px;}
+    100%{top: 2px;}
+}
+/*End planet 1*/
+
+/*Start Planet 2*/
+#planet-2{
+    background-image: linear-gradient(to right, blue, indigo, violet);
+    left: 240px;
+    box-shadow: 0px 0px 10px 10px darkblue;
+    position: absolute;
+    animation: movePlanet-2 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes movePlanet-2{
+    0%{top: 2px;}
+    100%{top: 1px;}
+}
+/*End planet 2*/
+
+/*Start Planet 3*/
+#planet-3{
+    background-image: linear-gradient(to bottom right, orange, yellow, orange, yellow, orange, yellow, orange, yellow, orange, yellow);
+    left: 420px;
+    box-shadow: 0px 0px 10px 10px gold;
+    position: absolute;
+    animation: movePlanet-3 0.5s ease-in-out infinite alternate;
+}
+    
+@keyframes movePlanet-3{
+    0%{top: 1px;}
+    100%{top: 2px;}
+}
+/*End planet 3*/
+
+/*Start planet 4*/
+#planet-4{
+    background-image: linear-gradient(red, darkorange, red, darkorange, red);
+    left: 610px;
+    box-shadow: 0px 0px 10px 10px darkred;
+    position: absolute;
+    animation: movePlanet-4 0.5s ease-in-out infinite alternate;
+}
+    
+@keyframes movePlanet-4{
+    0%{top: 2px;}
+    100%{top: 1px;}
+}
+/*End planet 4*/
+
+/*Start planet 5*/
+#planet-5{
+    background-image: linear-gradient(to bottom left, brown, orange, lightblue, yellow, brown);
+    left:  800px;
+    box-shadow: 0px 0px 10px 10px darkorange;
+    position: absolute;
+    animation: movePlanet-5 0.5s ease-in-out infinite;
+}
+@keyframes movePlanet-5{
+    0%{top: 1px;}
+    100%{top: 2px;}
+}
+/*End planet 5*/
+/*End planets*/
+
+/*Start UFO*/
+#ufo-part1{
+    width: 30px;
+    height: 30px;
+    background-color: silver;
+    box-shadow: 0.5px 0.5px 6px 1px grey;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border: 10px solid silver;
+    border-bottom: 0;
+    position: absolute;
+    bottom: 110px;
+    left: 615px;
+}
+
+#ufo-part2{
+    width: 60px;
+    height: 15px;
+    background-color: dodgerblue;
+    box-shadow: 0.5px 0.5px 6px 1px blue;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border: 10px solid dodgerblue;
+    border-bottom: 0;
+    position: absolute;
+    left: 600px;
+    bottom: 100px;
+}
+
+#ufo-leg1{
+    width: 3px;
+    height: 15px;
+    position: absolute;
+    background-color: silver;
+    bottom: 85px;
+    left: 620px;
+    transform: rotate(20deg);
+}
+
+#ufo-leg2{
+    width: 3px;
+    height: 15px;
+    position: absolute;
+    background-color: silver;
+    bottom: 85px;
+    left: 660px;
+    transform: rotate(-20deg);
+}
+#ufo-beam{
+    box-shadow: 0px 60px 70px 50px yellowgreen;
+    display: none;
+}
+#ufo:hover #ufo-beam{
+    display: block;
+}
+
+#ufo{
+    position: absolute;
+    top:400px;
+    left:40px;
+    animation: moveUfo 15s ease infinite alternate;
+    transition-property: transform;
+    transition-duration: 2s;
+}
+
+@keyframes moveUfo{
+    0%{top: 500px; left: 40px; transform: scale(0.1); opacity: 0.1;}
+    25%{top: 520px; left: 20px; opacity: 0.5;}
+    50%{top: 540px; left: 100px;}
+    75%{top: 560px; left: 60px;}
+    100%{top: 500px; left: 40px;}
+}
+
+#ufo{
+    box-shadow: 0px 15px 20px 0px lightgray;
+}
+/*End UFO*/
+
+/*Start Spacey*/
+#spacey{
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    top: 400px;
+    left: 130px; 
+    filter: drop-shadow(5px 5px 5px greenyellow);
+    animation: move-spacey 4s linear;
+}
+@keyframes move-spacey{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+#spacey-sound{
+    position: absolute;
+    width: 200px;
+    top: 500px;
+    left: 200px;
+    opacity: 0;
+}
+/*End Spacey*/
+
+/*Start text bubble*/
+.txt-bubble{
+    height: 250px;
+    width: 150px;
+    background-image: linear-gradient(silver, white);
+    position: absolute;
+    bottom: 60px;
+    left: 360px;
+    border-radius: 10%;
+    text-align: center;
+    filter: drop-shadow(0 0 8px white);
+    animation: bubble 5s linear;
+}
+@keyframes bubble{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+#bubble-p-txt{
+    font-family: monospace;
+    /*font-size: 12pt*/
+}
+
+.bubble-point{
+    width: 0; 
+    height: 0; 
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent; 
+    border-right:20px solid white; 
+    position: absolute;
+    bottom: 25px;
+    left: -20px;
+}
+/*End text bubble*/
+/*End main container*/
+
+
+
+
+
+
+
+
